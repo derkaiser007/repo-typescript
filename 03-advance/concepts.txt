@@ -1,0 +1,15 @@
+tsc --init
+
+npm init -y
+
+tsconfig.json:
+"outDir": "./dist",
+
+tsc -w   
+
+npm i lite-server
+
+in package.json:
+"scripts": {
+    "start": "lite-server"
+},
