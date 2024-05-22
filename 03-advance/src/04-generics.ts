@@ -17,19 +17,17 @@ identityThree(true)
 function identityFour<T>(val: T): T{
     return val
 }
-
-interface Bootle{
+interface Bottle{
     brand: string,
     type: number
 }
-// identityFour<Bootle>({brand: 'niraj', type: 26081992})
+identityFour<Bottle>({brand: 'niraj', type: 26081992})
 
-function getSearchProducts<T>(products: T[]): T {
-    const myIndex = 3
-    return products[myIndex]
+function getAllProducts<T>(products: T[]): T[] {
+    return products
 }
 
-const getMoreSearchProducts = <T>(products: T[]): T => {
+const getSearchProducts = <T>(products: T[]): T => {
     const myIndex = 4
     return products[myIndex]
 }
@@ -45,21 +43,26 @@ function anotherFunction<T, U extends Database>(valOne:T, valTwo:U):object {
         valTwo
     }
 }
-// anotherFunction(3, {})
+anotherFunction(true, {connection: 'r546tgy', username: 'niraj', password: 'n32'})
 
 interface Quiz{
     name: string,
-    type: string
+    subject: string,
+    duration: number
 }
 interface Course{
     name: string,
-    author: string,
-    subject: string
+    subject: string,
+    author: string
 }
-class Sellable<T>{
+class SellableContent<T extends Quiz | Course>{
     public cart: T[] = []
 
     addToCart(product: T){
         this.cart.push(product)
     }
 }
+let content = new SellableContent()
+content.addToCart({name: "Mock For CAT-24", subject: 'QA, DILR, VARC', duration: 2})
+content.addToCart({name: "QA For CAT-24", subject: 'QA', author: 'Arun Sharma'})
+console.log(content.cart);

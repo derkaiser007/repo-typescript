@@ -22,10 +22,10 @@ class Youtube implements TakePhoto, Story{
         public filter: string,
         public burst: number,
         public short: string
-    ){}
+    ){
+    }
 
     createStory(): void {
-        console.log("Story was created");
-        
+        console.log("Story was created");        
     }
 }

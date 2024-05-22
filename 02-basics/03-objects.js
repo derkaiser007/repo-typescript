@@ -18,6 +18,8 @@ function createCourse() {
 }
 function createUserDetails(user) {
     return { name: "", email: "", isActive: true };
+    // return {name: user.name, email: user.email, isActive: user.isActive}
+    // return user
 }
 createUserDetails({ name: "", email: "", isActive: true });
 var myUserInfo = {
@@ -27,3 +29,8 @@ var myUserInfo = {
     isActive: false
 };
 myUserInfo.email = "h@gmail.com";
+var myCardDetails = {
+    cardnumber: "12345",
+    cardDate: "01/25",
+    cvv: 456,
+};

@@ -14,12 +14,11 @@ identityThree(true);
 function identityFour(val) {
     return val;
 }
-// identityFour<Bootle>({})
-function getSearchProducts(products) {
-    const myIndex = 3;
-    return products[myIndex];
+identityFour({ brand: 'niraj', type: 26081992 });
+function getAllProducts(products) {
+    return products;
 }
-const getMoreSearchProducts = (products) => {
+const getSearchProducts = (products) => {
     const myIndex = 4;
     return products[myIndex];
 };
@@ -29,7 +28,8 @@ function anotherFunction(valOne, valTwo) {
         valTwo
     };
 }
-class Sellable {
+anotherFunction(true, { connection: 'r546tgy', username: 'niraj', password: 'n32' });
+class SellableContent {
     constructor() {
         this.cart = [];
     }
@@ -37,3 +37,7 @@ class Sellable {
         this.cart.push(product);
     }
 }
+let content = new SellableContent();
+content.addToCart({ name: "Mock For CAT-24", subject: 'QA, DILR, VARC', duration: 2 });
+content.addToCart({ name: "QA For CAT-24", subject: 'QA', author: 'Arun Sharma' });
+console.log(content.cart);

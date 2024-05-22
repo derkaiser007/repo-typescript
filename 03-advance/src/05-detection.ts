@@ -1,8 +1,10 @@
 function detectType(val: number | string ){
     if (typeof val === "string") {
         return val.toLowerCase()
+    } 
+    else if (typeof val === "number") {
+        return val + 3
     }
-    return val + 3
 }
 
 function provideId(id: string | null){
@@ -10,7 +12,7 @@ function provideId(id: string | null){
         console.log("Please provide ID");
         return
     }
-    id.toLowerCase()
+    return id.toLowerCase()
 }
 
 function printAll(strs: string | string[] | null) {    
@@ -19,7 +21,8 @@ function printAll(strs: string | string[] | null) {
         for (const s of strs) {
           console.log(s);
         }
-      } else if (typeof strs === "string") {
+      } 
+      else if (typeof strs === "string") {
         console.log(strs);
       }
     }
@@ -43,7 +46,8 @@ function isAdminAccount(account: User | Admin){
 function logValue(x: Date | string) {
     if (x instanceof Date) {
       console.log(x.toUTCString());        
-    } else {
+    } 
+    else if (typeof x === "string") {
       console.log(x.toUpperCase());                
     }
 }
@@ -68,20 +72,20 @@ interface Rectangle {
 
 type Shape = Circle | Square | Rectangle
 
-function getTrueShape(shape: Shape){
+function getArea_1(shape: Shape){
     if (shape.kind === "circle") {
         return Math.PI * shape.radius ** 2
     } 
     else if (shape.kind === "square") {
         return shape.side * shape.side
     } 
-    else {
+    else if (shape.kind === "rectangle") {
         return shape.length * shape.width
     }
 }
 
 
-function getArea(shape: Shape){
+function getArea_2(shape: Shape){
     switch(shape.kind){
         case "circle":
             return Math.PI * shape.radius ** 2
@@ -94,14 +98,18 @@ function getArea(shape: Shape){
 
         default:
             const _defaultforshape: never = shape
-            return _defaultforshape
+            return `Can't calculate the area of shape ${_defaultforshape}.`
     }
 }
 
 
 
-type Fish = {swim: () => void};
-type Bird = {fly: () => void};
+type Fish = {
+    swim: () => void
+};
+type Bird = {
+    fly: () => void
+};
 
 function isFish(pet: Fish | Bird): pet is Fish{
     return (pet as Fish).swim !== undefined
@@ -109,10 +117,9 @@ function isFish(pet: Fish | Bird): pet is Fish{
 
 function getFood(pet: Fish | Bird){
     if (isFish(pet)) {
-        pet
         return "fish food"
-    } else {
-        pet
+    } 
+    else {
         return "bird Food"
     }
 }

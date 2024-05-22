@@ -3,14 +3,16 @@ function detectType(val) {
     if (typeof val === "string") {
         return val.toLowerCase();
     }
-    return val + 3;
+    else if (typeof val === "number") {
+        return val + 3;
+    }
 }
 function provideId(id) {
     if (!id) {
         console.log("Please provide ID");
         return;
     }
-    id.toLowerCase();
+    return id.toLowerCase();
 }
 function printAll(strs) {
     if (strs) {
@@ -33,22 +35,22 @@ function logValue(x) {
     if (x instanceof Date) {
         console.log(x.toUTCString());
     }
-    else {
+    else if (typeof x === "string") {
         console.log(x.toUpperCase());
     }
 }
-function getTrueShape(shape) {
+function getArea_1(shape) {
     if (shape.kind === "circle") {
         return Math.PI * shape.radius ** 2;
     }
     else if (shape.kind === "square") {
         return shape.side * shape.side;
     }
-    else {
+    else if (shape.kind === "rectangle") {
         return shape.length * shape.width;
     }
 }
-function getArea(shape) {
+function getArea_2(shape) {
     switch (shape.kind) {
         case "circle":
             return Math.PI * shape.radius ** 2;
@@ -58,7 +60,7 @@ function getArea(shape) {
             return shape.length * shape.width;
         default:
             const _defaultforshape = shape;
-            return _defaultforshape;
+            return `Can't calculate the area of shape ${_defaultforshape}.`;
     }
 }
 function isFish(pet) {
@@ -66,11 +68,9 @@ function isFish(pet) {
 }
 function getFood(pet) {
     if (isFish(pet)) {
-        pet;
         return "fish food";
     }
     else {
-        pet;
         return "bird Food";
     }
 }

@@ -19,8 +19,7 @@ hitesh = {_name: "hc", _id: 334}
 
 function getDbIdOne(id: number | string){
     //making some API calls
-    console.log(`DB id is: ${id}`);
-    
+    console.log(`DB id is: ${id}`);    
 }
 getDbIdOne(3)
 getDbIdOne("3")
@@ -28,6 +27,9 @@ getDbIdOne("3")
 function getDbIdTwo(id: number | string){
     if (typeof id === "string") {
         id.toLowerCase()
+    }
+    else if (typeof id === "number") {
+        id.toFixed()
     }  
 }
 

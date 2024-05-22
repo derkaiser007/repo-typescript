@@ -15,3 +15,4 @@ var hitesh = {
 };
 hitesh.email = "h@hc.com";
 // hitesh.dbId = 33
+// console.log(hitesh)

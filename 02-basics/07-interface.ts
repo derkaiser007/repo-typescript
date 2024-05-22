@@ -8,6 +8,7 @@ interface User {
     googleId?: string
     // startTrail: () => string
     startTrail(): string
+    // getCoupon: (couponname: string, value: number) => number
     getCoupon(couponname: string, value: number): number
 }
 
@@ -18,6 +19,7 @@ interface User {
 interface Admin extends User {
     role: "admin" | "learner"
 }
+
 
 const hitesh: Admin = { 
     dbId: 22, 
@@ -34,3 +36,4 @@ const hitesh: Admin = {
 }
 hitesh.email = "h@hc.com"
 // hitesh.dbId = 33
+// console.log(hitesh)

@@ -26,6 +26,6 @@ class Insta extends TakeImage{
         }
 }
 
-const hc = new Insta("test", "Test", 3)
-
-hc.getReelTime()
+const hc = new Insta("test", "Test", 3);
+hc.getSepia();
+console.log(hc.getReelTime());

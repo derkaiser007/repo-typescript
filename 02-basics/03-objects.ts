@@ -25,6 +25,8 @@ type User = {
 }
 function createUserDetails(user: User): User{
     return {name: "", email: "", isActive: true}
+    // return {name: user.name, email: user.email, isActive: user.isActive}
+    // return user
 }
 createUserDetails({name: "", email: "", isActive: true})
 
@@ -42,7 +44,7 @@ let myUserInfo: UserInfo = {
     isActive: false
 }
 myUserInfo.email = "h@gmail.com"
-// myUser._id = "asa"
+// myUserInfo._id = "asa"
 
 type cardNumber = {
     cardnumber: string
@@ -52,6 +54,11 @@ type cardDate = {
 }
 type cardDetails = cardNumber & cardDate & {
     cvv: number
+}
+let myCardDetails: cardDetails = {
+    cardnumber: "12345",
+    cardDate: "01/25",
+    cvv: 456,
 }
 
 export{}

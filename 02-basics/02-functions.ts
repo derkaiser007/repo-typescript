@@ -13,8 +13,9 @@ function getUpper(val: string): string{
 }
 // console.log(getUpper("hitesh"));
 
-function signUpUser(name: string, email: string, isPaid: boolean): boolean{
-    return true
+function signUpUser(name: string, email: string, isPaid: boolean): boolean | string | void{
+    // return true
+    // return "200 OK"
 }
 // console.log(signUpUser("hitesh", "hitesh@lco.dev", false));
 
