@@ -23,7 +23,7 @@ allUsers.push({name: 'Niraj', isActive: true})
 
 const MLModels: number[][] = []
 MLModels.push([123, 234, 345, 456], [567, 678, 789])
-console.log(MLModels);
+// console.log(MLModels);
 
 
 export{}

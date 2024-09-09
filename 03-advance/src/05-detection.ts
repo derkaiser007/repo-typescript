@@ -123,3 +123,23 @@ function getFood(pet: Fish | Bird){
         return "bird Food"
     }
 }
+
+/*Explanation:
+Types:
+Fish: This type has a method swim(), which represents the behavior of a fish.
+Bird: This type has a method fly(), which represents the behavior of a bird.
+
+Union Type:
+The function isFish accepts an argument pet that can be either of type Fish or Bird. This is represented by the 
+union type Fish | Bird.
+
+Type Guard (pet is Fish):
+The function isFish is a user-defined type guard. The return type pet is Fish is a special return type in 
+TypeScript that tells the TypeScript compiler that if isFish returns true, then within the following code block, 
+pet should be treated as a Fish rather than Bird.
+
+Narrowing:
+Inside the function, the expression (pet as Fish) casts the pet variable to a Fish. The code then checks if 
+swim is defined (pet.swim !== undefined).
+If swim exists, it means that pet is of type Fish, and the function returns true. If swim is not present, the 
+function returns false, meaning that pet is of type Bird.*/

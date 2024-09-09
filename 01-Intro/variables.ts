@@ -14,11 +14,9 @@ let isLoggedIn: boolean = false
 
 // let hero;
 let hero: string;
-function getHero(){
+function getHero() {
     return "thor"
 }
 hero = getHero()
-
-
 
 export{}

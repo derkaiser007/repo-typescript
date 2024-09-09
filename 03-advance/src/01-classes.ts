@@ -47,7 +47,7 @@ class User {
         return `apple${this.email}`
     }
 
-    get courseCount(): number {
+    get courseCount(): number{
         return this._courseCount
     }
 
@@ -237,4 +237,29 @@ account.withdraw(300);
 account.balance = -100; // Throws error: Balance cannot be negative
   
   
-  
+/*Polymorphism*/
+/*
+class Animal {
+  sound() {
+      console.log("Some generic animal sound");
+  }
+}
+
+class Dog extends Animal {
+  sound() {
+      console.log("Bark");
+  }
+}
+
+class Cat extends Animal {
+  sound() {
+      console.log("Meow");
+  }
+}
+
+const animals: Animal[] = [new Dog(), new Cat()];
+animals.forEach(animal => animal.sound()); // Calls the specific implementation
+
+Bark
+Meow
+*/

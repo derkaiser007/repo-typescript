@@ -35,7 +35,7 @@ function getDbIdTwo(id: number | string){
 
 const data: number[] = [1, 2, 3]
 const data2: string[] = ["1", "2", "3"]
-const data3: (string | number | boolean)[] = ["1", 3, "2", true]
+const data3: (string | number | boolean)[] = [3, true, "Niraj", false, 675, "87"]
 
 let seatAllotment: "aisle" | "middle" | "window"
 seatAllotment = "aisle"
