@@ -1,5 +1,5 @@
-// tsc 01-arrays.ts
-// node 01-arrays.js
+// tsc 02-basics/01-arrays
+// node 02-basics/01-arrays
 
 let numbers: number[] = [1, 2, 3, 4, 5];
 let fruits: Array<string> = ["Apple", "Banana", "Orange"];

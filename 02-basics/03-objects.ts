@@ -1,5 +1,5 @@
-// tsc 03-objects.ts
-// node 03-objects.js
+// tsc 02-basics/03-objects
+// node 02-basics/03-objects
 
 const User = {
     name: "hitesh",

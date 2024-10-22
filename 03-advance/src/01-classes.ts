@@ -1,6 +1,6 @@
 console.log('Hi! Niraj');
 
-////####Usage of Public, Private and Protected Data####////
+////####Usage of Public, Private, Protected and ReadOnly Data####////
 ////####Example-1####////
 class UserInfo {
     public email: string

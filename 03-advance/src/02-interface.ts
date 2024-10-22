@@ -33,8 +33,8 @@ class Youtube implements TakePhoto, Story{
 
 ////What is the advantage of useing interface with classes?////
 /* 1.Defining a Contract: An interface defines a set of methods and properties that a class must implement. 
-This ensures that any class implementing the interface will have the required structure, 
-making your code more predictable and easier to maintain.*/
+This ensures that any class implementing the interface will have the required structure, making your code more 
+predictable and easier to maintain.*/
 interface IShape {
     area(): number;
     perimeter(): number;

@@ -1,5 +1,5 @@
-// tsc 05-tuple.ts
-// node 05-tuple.js
+// tsc 02-basics/05-tuple
+// node 02-basics/05-tuple
 
 const user: (string | number)[] = [1, "hc"]
 
@@ -13,6 +13,6 @@ const newUser: userData = [112, "example@google.com"]
 newUser[1] = "hc.com"
 // newUser.push(true)
 newUser.push("true")
-// console.log(newUser)
+console.log(newUser)
 
 export{}

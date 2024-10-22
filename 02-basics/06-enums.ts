@@ -1,5 +1,5 @@
-// tsc 06-enums.ts
-// node 06-enums.js
+// tsc 02-basics/06-enums
+// node 02-basics/06-enums
 
 enum SeatChoice {
     AISLE = "aisle",

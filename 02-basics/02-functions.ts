@@ -1,5 +1,5 @@
-// tsc 02-functions.ts
-// node 02-functions.js
+// tsc 02-basics/02-functions
+// node 02-basics/02-functions
 
 function addTwo(num: number): number{
     return num + 2

@@ -1,5 +1,5 @@
-// tsc 04-union.ts
-// node 04-union.js
+// tsc 02-basics/04-union
+// node 02-basics/04-union
 
 let score: number | string | boolean = 33
 score = 44
