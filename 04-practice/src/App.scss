@@ -1,0 +1,47 @@
+.skeleton-loader {
+    display: flex;
+    gap: 10px; /* Adjust spacing */
+}
+
+.skeleton-shape {
+    background: linear-gradient(
+        90deg,
+        #e0e0e0 25%,
+        #f0f0f0 50%,
+        #e0e0e0 75%
+    ); /* Gradient background for strip effect */
+    background-size: 200% 100%; /* Ensure gradient spans wider for the animation */
+    height: 20px; /* Default height */
+    flex-grow: 1; /* Dynamic sizing */
+    animation: pulse 1.5s infinite, stripMove 1.5s infinite, moveHorizontally 5s infinite; /* Add strip animation */
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes stripMove {
+    0% {
+        background-position: 200% 0; /* Start off-screen */
+    }
+    100% {
+        background-position: -200% 0; /* End off-screen */
+    }
+}
+
+@keyframes moveHorizontally {
+    0% {
+        transform: translateX(-100%); /* Start just outside the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move completely to the right */
+    }
+}
